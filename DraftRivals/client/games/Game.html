@@ -1,0 +1,19 @@
+<template name="Game">
+    <article class="game {{#if inGames}}in-games{{/if}}">
+        <h3>{{name}}</h3>
+        <p>{{desc}}</p>
+        <p>
+            {{#each players}}
+                <span class="players">{{name}} - {{amount}}</span>
+            {{/each}}
+        </p>
+        <a href="/current-games/{{_id}}">View Details</a>
+        
+        {{#if inGames}}
+            <button class="btn-deny toggle-games">Remove from Games</button>
+        {{else}}
+            <button class="btn-primary toggle-games">Add to Games</button>
+        {{/if}}
+        
+    </article>
+</template>

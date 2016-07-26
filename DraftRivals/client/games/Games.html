@@ -1,0 +1,12 @@
+<template name = "Games">
+    {{> NewGame}}
+    <section class = "games">
+        {{#if Template.subscriptionsReady}}
+        {{#each games}}
+            {{>Game}}
+        {{/each}}
+        {{else}}
+            <p>Loading</p>
+        {{/if}}
+    </section>
+</template>

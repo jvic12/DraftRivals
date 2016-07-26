@@ -1,0 +1,16 @@
+<template name="CreateAGame">
+    <h1 class="page-title">My Current Games</h1>
+    {{#each games}}
+        {{>CreateAGameItem}}
+    {{else}}
+        <h3>Please add a <a href="/current-games">game</a> and start playing</h3>
+    {{/each}}
+    
+</template>
+
+<template name="CreateAGameItem">
+    <div class="game-item">
+        <h3>{{name}}</h3>
+        <p>{{desc}}</p>
+    </div>
+</template>
